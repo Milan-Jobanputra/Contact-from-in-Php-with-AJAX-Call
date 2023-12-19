@@ -5,8 +5,9 @@ Let's create a more advanced PHP contact form with AJAX to handle form submissio
 This example assumes you have jQuery included in your project for simplicity. If you don't have it, you can include it from a CDN or download it.
 
 
-HTML (index.html): Main Form file (frontend)
+HTML (index.html): Main Form file (frontend) + Ajax jqury call
 
+PHP (process_form.php): TO handle ajax submit data
 
 
 This is a basic example, and you should add more validation, security measures, and error handling based on your specific needs. 
