@@ -6,6 +6,32 @@
     <title>Contact Form</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+     <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (e) {
+                e.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                // Serialize the form data
+                var formData = $(this).serialize();
+
+                // Make AJAX request
+                $.ajax({
+                    type: "POST",
+                    url: "process_form.php", // Change this to your PHP processing script
+                    data: formData,
+                    success: function (data) {
+                        // Handle the successful response
+                        $("#formResponse").html(data);
+                    },
+                    error: function (error) {
+                        // Handle errors
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+    
 </head>
 <body>
     <div id="formResponse"></div>
